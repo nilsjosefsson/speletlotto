@@ -130,7 +130,7 @@ int main()
 		error = 0;
 		while (!(std::cin >> input))
 		{
-			std::cout << RED << "Error! You did not chose a number\n" << RESET;
+			std::cout << RED << "Error! You did not chose a number\n" << RESET << GREEN;
 			std::cin.clear();
 			std::cin.ignore(1000, '\n');
 		}
