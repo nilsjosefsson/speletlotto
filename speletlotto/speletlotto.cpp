@@ -39,11 +39,11 @@
 class Lottoutils
 {
 public:
-	static void sort(int* arr, int lenght) 
+	static void sort(int* arr, int length) 
 	{
-		for (int k = 0; k < lenght - 1; k++)
+		for (int k = 0; k < length - 1; k++)
 		{
-			for (int i = 0; i < lenght - 1; i++) {
+			for (int i = 0; i < length - 1; i++) {
 				if (arr[i] > arr[i + 1])
 				{
 					int swap = arr[i];
@@ -54,14 +54,14 @@ public:
 		}
 		return;
 	}
-	static void uniquenumbers(int* arr, int lenght) 
+	static void uniquenumbers(int* arr, int length) 
 	{
 		bool different = true;
 		while (different)
 		{
 			different = false;
-			for (int i = 0; i < lenght; i++) {
-				for (int j = i + 1; j < lenght; j++)
+			for (int i = 0; i < length; i++) {
+				for (int j = i + 1; j < length; j++)
 				{
 					if (arr[i] == arr[j]) {
 						arr[j] = rand() % 35 + 1;
@@ -72,16 +72,16 @@ public:
 		}
 		return;
 	}
-	static bool compareuniquenumbers(int* arr, int* arr2, int lenght, int lenght2)
+	static bool compareuniquenumbers(int* arr, int* arr2, int length, int length2)
 	{
 		bool haschanged = false;
 		bool different = true;
 		while (different)
 		{
 			different = false;
-			for (int i = 0; i < lenght; i++)
+			for (int i = 0; i < length; i++)
 			{
-				for (int j = 0; j < lenght2; j++) {
+				for (int j = 0; j < length2; j++) {
 					if (arr[i] == arr2[j])
 					{
 						arr[i] = rand() % 35 + 1;
@@ -93,16 +93,16 @@ public:
 		}
 		return haschanged;
 	}
-	static void randomnumbers(int* arr, int lenght) 
+	static void randomnumbers(int* arr, int length) 
 	{
-		for (int i = 0; i < lenght; i++)
+		for (int i = 0; i < length; i++)
 			arr[i] = rand() % 35 + 1;
 	}
-	static int wincounter(int* arr, int* arr2, int lenght, int lenght2) {
+	static int wincounter(int* arr, int* arr2, int length, int length2) {
 		int wincount = 0;
-		for (int i = 0; i < lenght; i++)
+		for (int i = 0; i < length; i++)
 		{
-			for (int j = 0; j < lenght2; j++) {
+			for (int j = 0; j < length2; j++) {
 				if (arr[i] == arr2[j])
 					wincount++;
 			}
