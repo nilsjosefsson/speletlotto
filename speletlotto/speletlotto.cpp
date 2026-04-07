@@ -117,8 +117,6 @@ public:
 		std::cout << "#\n";
 	}
 };
-
-
 int main()
 {
 	srand(time(0));
