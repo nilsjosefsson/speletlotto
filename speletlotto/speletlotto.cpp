@@ -144,28 +144,21 @@ int main()
 				error = 2;
 		}
 		if (error)
-			std::cout << RED << "Error! You " << ((error == 1) ? "chose a number out of the range\n" 
-														: "have already used this number\n") << RESET;
+			std::cout << RED << "Error! You " << ((error == 1) ? "chose a number out of the range\n" : "have already used this number\n") << RESET;
 		else
 			choices[i] = input;
-		
 	}
 	std::cout << RESET;
 	// Sorterar valen med bubblesort
 	Lottoutils::sort(choices, 7);
-	
-	
 	int wincount = 0;
 	int wincount2 = 0;
 	int winnumbers[7];
 	int extranumbers[4];
-
-	
 	// Tilldelning av de sju talen som vann samt sortering och kollar om all är unika
 	Lottoutils::randomnumbers(winnumbers, 7);
 	Lottoutils::uniquenumbers(winnumbers, 7);
 	Lottoutils::sort(winnumbers, 7);
-	
 	// Tilldelning av de 4 extratalen, sort, unik, unik mot winnumbers
 	Lottoutils::randomnumbers(extranumbers, 4);
 	do
@@ -173,19 +166,9 @@ int main()
 		Lottoutils::uniquenumbers(extranumbers, 4);
 	} while (Lottoutils::compareuniquenumbers(extranumbers, winnumbers, 4, 7));
 	Lottoutils::sort(extranumbers, 4);
-	
-	
-	
 	// wincount är antalet av winnumbers som var korrekt och wincount2 är antalet extranummer som var korrekt
 	wincount += Lottoutils::wincounter(winnumbers, choices, 7, 7);
 	wincount2 += Lottoutils::wincounter(extranumbers, choices, 4, 7);
-	
-	
-	
-	
-	
-	
-	
 	Lottoutils::newsegment();
 	std::cout << "Your choices were: ";
 		for (int i = 0; i < 7; i++)
@@ -196,8 +179,7 @@ int main()
 		std::cout << "s";
 	std::cout << std::endl;
 	if (wincount2)
-		std::cout << wincount2 << ((wincount2 > 1) ? " Were extra numbers"
-													: " Was an extra number");
+		std::cout << wincount2 << ((wincount2 > 1) ? " Were extra numbers": " Was an extra number");
 	std::cout << std::endl;
 	std::cout << "The correct main numbers were: ";
 	for (int i = 0; i < 7; i++)
