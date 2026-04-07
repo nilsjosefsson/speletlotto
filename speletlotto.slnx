@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="speletlotto/speletlotto.vcxproj" />
+  <Project Path="speletlotto/speletlotto.vcxproj" Id="1edaba7e-1d84-4282-a03d-f9c42668b7f6" />
 </Solution>
